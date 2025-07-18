@@ -55,8 +55,42 @@ body {
     display: block;
 }
 .sidebar {
-margin: 10px;
-padding: 50px;
+    flex: 1;
+    min-width: 280px;
+    background-color: #fdfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: left;
+    margin-top: 60px;
+}
+.sidebar-content-wrapper {
+    display: flex; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+}
+.sidebar-section h4 {
+    font-size: 1.3em;
+    color: #8C2222;
+    margin-bottom: 10px; 
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+.sidebar-section p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #555;
+}
+.sidebar-section p a {
+    color: #007bff; 
+    text-decoration: underline;
+}
+.sidebar-section p a:hover {
+    color: #0056b3; 
 }
 .shokudo-hero-inner h2 {
     font-size: 3em; 
@@ -206,11 +240,6 @@ padding: 50px;
     height: auto;
 }
 
-.copyright {
-    font-size: 0.8em; /* コピーライトの文字サイズ */
-    color: #bbb;
-    margin: 0;
-}
 
 
 @media (max-width: 768px) {
@@ -257,5 +286,8 @@ padding: 50px;
         flex-direction: column; /* 縦並びにする */
         gap: 10px;
         margin-bottom: 15px;
+    }
+    .footer-logo img {
+        width: 60px; /* モバイル用のロゴサイズ */
     }
 }
