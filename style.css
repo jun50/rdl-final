@@ -48,22 +48,58 @@ body {
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0px auto; 
     padding: 1px 20px;
     }
     .header-logo {
     display: block;
 }
-/*.sidebar {
-text-align: right;  
-}*/
+.sidebar {
+    flex: 1;
+    min-width: 280px;
+    background-color: #fdfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: left;
+    margin-top: 60px;
+}
+.sidebar-content-wrapper {
+    display: flex; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+}
+.sidebar-section h4 {
+    font-size: 1.3em;
+    color: #8C2222;
+    margin-bottom: 10px; 
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+.sidebar-section p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #555;
+}
+.sidebar-section p a {
+    color: #007bff; 
+    text-decoration: underline;
+}
+.sidebar-section p a:hover {
+    color: #0056b3; 
+}
 .shokudo-hero-inner h2 {
     font-size: 3em; 
     font-weight: 700;
     color: #2c3e50;
     margin-top: 10px; 
     margin-bottom: 15px; 
-    letter-spacing: 0.02em; 
+    letter-spacing: 0.02em;
+    padding-left: 40px; 
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
 }
 
@@ -72,7 +108,8 @@ text-align: right;
     color: #555555; 
     line-height: 1.8;
     max-width: 1350px; 
-    margin: 0 auto 40px auto; 
+    margin: 10px auto 40px auto; 
+    padding-left: 40px;
     text-align: left;
 }
 .shokudo-hero-inner img {
@@ -140,7 +177,7 @@ text-align: right;
 }
 
 .menu-photo-item p {
-    font-size: 0.95em;
+    font-size: 1.95em;
     color: #555;
     line-height: 1.4;
     margin: 0;
@@ -203,15 +240,10 @@ text-align: right;
     height: auto;
 }
 
-.copyright {
-    font-size: 0.8em; /* コピーライトの文字サイズ */
-    color: #bbb;
-    margin: 0;
-}
 
-/* レスポンシブ調整（モバイル向け） */
+
 @media (max-width: 768px) {
-    /* ヒーローセクション */
+    
     .shokudo-hero-inner h2 {
         font-size: 2em;
         margin-bottom: 10px;
@@ -225,10 +257,9 @@ text-align: right;
         padding: 40px 15px;
     }
     .shokudo-hero-inner img {
-        height: 250px; /* モバイルでは高さを少し抑える */
+        height: 250px; 
     }
-
-    /* おすすめメニュー見出し */
+    
     .shokudo-inner h3 {
         font-size: 1.8em;
         margin-top: 30px;
@@ -255,5 +286,8 @@ text-align: right;
         flex-direction: column; /* 縦並びにする */
         gap: 10px;
         margin-bottom: 15px;
+    }
+    .footer-logo img {
+        width: 60px; /* モバイル用のロゴサイズ */
     }
 }
