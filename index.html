@@ -11,7 +11,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="common.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -35,16 +40,32 @@
     <main class="main">
         <section class="shokudo-hero">
             <div class="shokudo-hero-inner">
-                <img src="images/meijo.jpg" alt="名城食堂の全景" class="hero-main-photo">
-                <h2>名城食堂ガイド</h2>
-                <p>名城食堂のおすすめメニューを現役の学生が紹介！</p>
+                <div class="swiper hero-swiper" style="width: 100%; height: 100dvh;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/meijo.jpg" alt="名城食堂の全景">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/meijo.jpg" alt="名城食堂の全景">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/meijo.jpg" alt="名城食堂の全景">
+                        </div>
+                    </div>
+                    <div class="hero-swiper-pagination swiper-pagination"></div>
+                    <div class="hero-swiper-button-next swiper-button-next"></div>
+                    <div class="hero-swiper-button-prev swiper-button-prev"></div>
+                </div>
+                <!-- <img src="images/meijo.jpg" alt="名城食堂の全景" class="hero-main-photo"> -->
+                <div class="hero-text-wrapper">
+                    <h2>名城食堂ガイド</h2>
+                    <p>名城食堂のおすすめメニューを現役の学生が紹介！</p>
+                </div>
             </div>
         </section>
         <aside class="sidebar">
+            <h2 class="sidebar-header">営業情報</h2>
             <div class="sidebar-content-wrapper">
-                <div class="sidebar-section">
-                    <h2>営業情報</h2>
-                </div>
                 <div class="sidebar-section">
                     <h4>営業時間</h4>
                     <p>月〜金: 10:00 - 16:00 </p>
@@ -60,27 +81,32 @@
         <section class="shokudo-section voice">
             <div class="shokudo-inner">
                 <h3>おすすめメニュー</h3>
-                <div class="scroll-container-flex">
-                    <div class="menu-photo-item">
-                        <img src="images/pork-soboro.jpg" alt="料理の写真1">
-                        <p>豚そぼろ丼</p>
+                <div class="menu-swiper swiper">
+                    <div class="swiper-wrapper">
+                        <a href="menu/pork-soboro.html" class="menu-photo-item swiper-slide">
+                            <img src="images/pork-soboro.jpg" alt="豚そぼろ丼の写真">
+                            <p>豚そぼろ丼</p>
+                        </a>
+                        <a href="menu/chicken-katsu.html" class="menu-photo-item swiper-slide">
+                            <img src="images/chicken-katsu.jpg" alt="チキンカツ丼の写真">
+                            <p>チキンカツ丼</p>
+                        </a>
+                        <a href="menu/fried-chicken.html" class="menu-photo-item swiper-slide">
+                            <img src="images/fried-chicken.jpg" alt="揚げどりの写真">
+                            <p>揚げどり</p>
+                        </a>
+                        <a href="menu/lunch-set.html" class="menu-photo-item swiper-slide">
+                            <img src="images/lunch-set.jpg" alt="欲張りランチの写真">
+                            <p>欲張りランチ</p>
+                        </a>
+                        <a href="menu/crab-cream-croquette.html" class="menu-photo-item swiper-slide">
+                            <img src="images/crab-cream-croquette.jpg" alt="料理の写真4">
+                            <p>カニクリームコロッケ定食</p>
+                        </a>
                     </div>
-                    <div class="menu-photo-item">
-                        <img src="images/chicken-katsu.jpg" alt="料理の写真2">
-                        <p>チキンカツ丼</p>
-                    </div>
-                    <div class="menu-photo-item">
-                        <img src="images/fried-chicken.jpg" alt="料理の写真3">
-                        <p>揚げどり</p>
-                    </div>
-                    <div class="menu-photo-item">
-                        <img src="images/lunch-set.jpg" alt="料理の写真4">
-                        <p>欲張りランチ</p>
-                    </div>
-                    <div class="menu-photo-item">
-                        <img src="images/crab-cream-croquette.jpg" alt="料理の写真4">
-                        <p>カニクリームコロッケ定食</p>
-                    </div>
+                    <div class="menu-swiper-pagination swiper-pagination"></div>
+                    <div class="menu-swiper-button-next swiper-button-next"></div>
+                    <div class="menu-swiper-button-prev swiper-button-prev"></div>
                 </div>
             </div>
         </section>
@@ -96,6 +122,41 @@
             <img src="images/meishoku.jpg" alt="ロゴ">
         </a>
     </footer>
+    <script>
+        const swiper = new Swiper('.hero-swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.hero-swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.hero-swiper-button-next',
+                prevEl: '.hero-swiper-button-prev',
+            },
+        });
+
+        const menuSwiper = new Swiper('.menu-swiper', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+                el: '.menu-swiper-pagination',
+            },
+            slidesPerView: 4,
+            spaceBetween: 15,
+            slideOffsetBefore: 10,
+            slideOffsetAfter: 10,
+            freeMode: true,
+            loop: false,
+            navigation: {
+                nextEl: '.menu-swiper-button-next',
+                prevEl: '.menu-swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>

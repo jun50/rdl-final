@@ -1,0 +1,491 @@
+/* メニュー詳細ページ用スタイル */
+.menu-detail-container {
+    max-width: 1200px;
+    margin: 80px auto 40px auto;
+    padding: 0 20px;
+}
+
+.menu-detail-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-detail-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--main-meijo-colour);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+}
+
+.menu-detail-catchphrase {
+    font-size: 1.3em;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.menu-detail-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.menu-detail-image-swiper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+
+.menu-detail-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.menu-detail-info {
+    background-color: #fdfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.menu-detail-description {
+    margin-bottom: 30px;
+}
+
+.menu-detail-description h3 {
+    color: var(--main-meijo-colour);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.menu-detail-description p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+.menu-detail-price-inner {
+    display: flex;
+    align-items: first baseline;
+}
+
+.menu-detail-price {
+    margin-bottom: 30px;
+}
+
+.menu-detail-price h3 {
+    color: var(--main-meijo-colour);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.price-amount {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--main-meijo-colour);
+    margin-bottom: 5px;
+}
+
+.price-tax {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.menu-detail-nutrition {
+    margin-bottom: 30px;
+}
+
+.menu-detail-nutrition h3 {
+    color: var(--main-meijo-colour);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.nutrition-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nutrition-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.nutrition-value {
+    font-weight: 600;
+    color: #333;
+}
+
+.menu-detail-additional {
+    margin-bottom: 30px;
+}
+
+.menu-detail-additional h3 {
+    color: var(--main-meijo-colour);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.additional-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+.additional-icon {
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-meijo-colour);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.additional-text {
+    color: #555;
+    font-size: 0.95em;
+}
+
+.back-to-menu {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-to-menu a {
+    display: inline-block;
+    background-color: var(--main-meijo-colour);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(183, 25, 63, 0.3);
+}
+
+.back-to-menu a:hover {
+    background-color: #a01535;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(183, 25, 63, 0.4);
+}
+
+/* 口コミセクション */
+
+.review-section h3 {
+    text-align: center;
+    color: var(--main-meijo-colour);
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.review-form {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 48px;
+}
+
+.review-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--main-meijo-colour);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.rating-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    flex-direction: row-reverse;
+}
+
+.rating-stars input[type="radio"] {
+    display: none;
+}
+
+.rating-stars label {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+/* 星のホバー効果 */
+.rating-stars label:hover,
+.rating-stars label:hover ~ label {
+    color: #ffd700;
+}
+
+.rating-stars input[type="radio"]:checked ~ label {
+    color: #ffd700;
+}
+
+.submit-button {
+    background-color: var(--main-meijo-colour);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #a01535;
+}
+
+.reviews-display {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.review-item {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid var(--main-meijo-colour);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-meijo-colour);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.review-date {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.review-rating {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: #ffd700;
+    font-size: 18px;
+}
+
+.star.empty {
+    color: #ddd;
+}
+
+.review-content {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.review-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.review-tag {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.no-reviews {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 40px 20px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .menu-detail-container {
+        margin: 60px auto 30px auto;
+        padding: 0 15px;
+    }
+
+    .menu-detail-title {
+        font-size: 2em;
+    }
+
+    .menu-detail-catchphrase {
+        font-size: 1.1em;
+    }
+
+    .menu-detail-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .menu-detail-info {
+        padding: 20px;
+    }
+
+    .price-amount {
+        font-size: 1.8em;
+    }
+
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .back-to-menu a {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-detail-title {
+        font-size: 1.8em;
+    }
+
+    .menu-detail-catchphrase {
+        font-size: 1em;
+    }
+
+    .menu-detail-info {
+        padding: 15px;
+    }
+
+    .price-amount {
+        font-size: 1.6em;
+    }
+
+    .review-form {
+        padding: 20px;
+        margin: 0 15px 30px 15px;
+    }
+
+    .review-section {
+        margin: 40px 15px 0 15px;
+        padding: 30px 15px;
+    }
+
+    .review-item {
+        padding: 20px;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .rating-stars label {
+        font-size: 20px;
+    }
+} 
