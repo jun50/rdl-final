@@ -85,19 +85,19 @@
                 <div class="menu-swiper swiper">
                     <div class="swiper-wrapper">
                         <div class="menu-photo-item swiper-slide">
-                            <img src="images/pork-soboro.jpg" alt="料理の写真1">
+                            <img src="images/pork-soboro.jpg" alt="豚そぼろ丼の写真">
                             <p>豚そぼろ丼</p>
                         </div>
                         <div class="menu-photo-item swiper-slide">
-                            <img src="images/chicken-katsu.jpg" alt="料理の写真2">
+                            <img src="images/chicken-katsu.jpg" alt="チキンカツ丼の写真">
                             <p>チキンカツ丼</p>
                         </div>
                         <div class="menu-photo-item swiper-slide">
-                            <img src="images/fried-chicken.jpg" alt="料理の写真3">
+                            <img src="images/fried-chicken.jpg" alt="揚げどりの写真">
                             <p>揚げどり</p>
                         </div>
                         <div class="menu-photo-item swiper-slide">
-                            <img src="images/lunch-set.jpg" alt="料理の写真4">
+                            <img src="images/lunch-set.jpg" alt="欲張りランチの写真">
                             <p>欲張りランチ</p>
                         </div>
                         <div class="menu-photo-item swiper-slide">
@@ -125,21 +125,19 @@
     </footer>
     <script>
         const swiper = new Swiper('.hero-swiper', {
-            // Optional parameters
             direction: 'horizontal',
             loop: true,
-
-            // If we need pagination
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: '.hero-swiper-pagination',
             },
-
-            // Navigation arrows
             navigation: {
                 nextEl: '.hero-swiper-button-next',
                 prevEl: '.hero-swiper-button-prev',
             },
-
         });
 
         const menuSwiper = new Swiper('.menu-swiper', {
@@ -148,8 +146,12 @@
             pagination: {
                 el: '.menu-swiper-pagination',
             },
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 15,
+            slideOffsetBefore: 10,
+            slideOffsetAfter: 10,
+            freeMode: true,
+            loop: false,
             navigation: {
                 nextEl: '.menu-swiper-button-next',
                 prevEl: '.menu-swiper-button-prev',

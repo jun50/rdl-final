@@ -1,3 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Noto Sans JP", sans-serif; 
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.6; 
+    color: #333333;
+    --main-meijo-colour: #b7193f;
+
+    --swiper-navigation-color: var(--main-meijo-colour);
+    --swiper-pagination-color: var(--main-meijo-colour);
+    --swiper-pagination-bullet-size: 12px;
+}
 
 .header-logo img {
     width: 100px;
@@ -19,24 +36,24 @@ a {
     padding: 0;
     width: 100%;
     }
+    
+.site-menu ul {
+    display: flex;
+    gap: 20px;
+}
+.site-menu ul li {
+    list-style: none;
+}
+
+.site-menu ul li a:hover {
+    opacity: 0.8;
+}
 
 .noto-sans-jp-body {
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-}
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: "Noto Sans JP", sans-serif; 
-    font-optical-sizing: auto;
-    font-weight: 400; 
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.6; 
-    color: #333333;
 }
 
 
@@ -50,7 +67,7 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0px auto; 
-    padding: 1px 20px;
+    padding: 12px 20px;
     }
     .header-logo {
     display: block;
@@ -64,8 +81,13 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 20px;
     text-align: left;
-    margin-top: 60px;
+    margin: 60px 5%;
 }
+
+.shokudo-inner {
+    margin: 0 5%;
+}
+
 .sidebar-content-wrapper {
     display: flex; 
     gap: 20px; 
@@ -74,7 +96,7 @@ body {
 }
 .sidebar-section h4 {
     font-size: 1.3em;
-    color: #8C2222;
+    color: var(--main-meijo-colour);
     margin-bottom: 10px; 
     border-bottom: 2px solid #eee;
     padding-bottom: 5px;
@@ -96,16 +118,18 @@ body {
 
 .hero-text-wrapper {
     position: absolute;
-    top: 40%;
-    left: 15%;
     z-index: 10;
     pointer-events: none;
+    width: 100%;
+    top: 35%;
 }
 
 .shokudo-hero-inner h2 {
+    max-width: 1200px;
+    margin: 0 auto;
     font-size: 3em; 
     font-weight: 700;
-    color: #b7193f;
+    color: var(--main-meijo-colour);
     margin-top: 10px; 
     margin-bottom: 15px; 
     letter-spacing: 0.02em;
@@ -117,7 +141,8 @@ body {
     font-size: 1.3em; 
     color: #ffffff; 
     line-height: 1.8;
-    max-width: 1350px; 
+    max-width: 1200px; 
+    margin: 0 auto;
     margin: 10px auto 40px auto; 
     padding-left: 40px;
     text-align: left;
@@ -125,7 +150,7 @@ body {
 }
 .shokudo-hero-inner img {
     width: 100%;
-    height: auto;
+    height: 100% !important;
     margin: 0 auto;
     display: block;
     object-fit: cover;
@@ -212,7 +237,7 @@ body {
 }
 
 .footer .site-menu ul li a:hover {
-    color: #d03636; /* ホバー時の色（ヘッダーと合わせる） */
+    color: var(--main-meijo-colour); /* ホバー時の色（ヘッダーと合わせる） */
 }
 
 .footer-logo {
@@ -237,9 +262,6 @@ body {
         font-size: 1em;
         line-height: 1.6;
         margin-bottom: 20px;
-    }
-    .shokudo-hero-inner {
-        padding: 40px 15px;
     }
     .shokudo-hero-inner img {
         height: 250px; 
