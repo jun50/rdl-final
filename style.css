@@ -8,7 +8,8 @@ a {
     text-decoration: none;
     }
 .header {
-    background-color: #d03636;
+    background-color: rgba(208, 54, 54, 0.8);
+    backdrop-filter: blur(10px);
     color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -20,10 +21,10 @@ a {
     }
 
 .noto-sans-jp-body {
-font-family: "Noto Sans JP", sans-serif;
-font-optical-sizing: auto;
-font-weight: 400;
-font-style: normal;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 body {
     margin: 0;
@@ -115,44 +116,18 @@ body {
 .shokudo-hero-inner img {
     width: 100%;
     height: auto;
-    max-width: 1400px;
     margin: 0 auto;
     display: block;
+    object-fit: cover;
 }
 /*.menu-photo img{
     width: 500px;
     height: auto;
 }*/
-.scroll-container-text {
-    width: 100%;
-    overflow-x: auto;
-    padding: 10px 0; 
-    white-space: nowrap; 
-    box-sizing: border-box;
-}
-.scroll-container-text .item {
-    display: inline-block;
-    width: 150px;
-    height: 100px;
-    background-color: #e0f2f7;
-    border: 1px solid #b3e5fc;
-    margin-right: 10px;
-    line-height: 100px; 
-    text-align: center;
-    font-size: 1.2em;
-    flex-shrink: 0;
-}
 
-.scroll-container-flex {
-    width: 100%; 
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; 
-    display: flex; 
-    padding-bottom: 15px; 
-    box-sizing: border-box;
-    gap: 20px;
+.menu-swiper {
+    padding-bottom: 48px !important;
 }
-
 
 .menu-photo-item {
     flex-shrink: 0; 
