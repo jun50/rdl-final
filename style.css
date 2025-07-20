@@ -12,7 +12,7 @@ a {
     backdrop-filter: blur(10px);
     color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     margin: 0; 
