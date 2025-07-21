@@ -141,7 +141,7 @@
 
         const menuSwiper = new Swiper('.menu-swiper', {
             direction: 'horizontal',
-            loop: true,
+            loop: false,
             pagination: {
                 el: '.menu-swiper-pagination',
             },
@@ -150,10 +150,23 @@
             slideOffsetBefore: 10,
             slideOffsetAfter: 10,
             freeMode: true,
-            loop: false,
             navigation: {
                 nextEl: '.menu-swiper-button-next',
                 prevEl: '.menu-swiper-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 8,
+                },
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                900: {
+                    slidesPerView: 3,
+                    spaceBetween: 12,
+                },
             },
         });
     </script>

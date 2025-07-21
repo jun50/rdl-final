@@ -192,4 +192,17 @@
     .shokudo-inner {
         padding: 0 15px;
     }
+    
+    .sidebar-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sidebar-section p {
+        padding: 0 0 5px 0;
+    }
+
+    .sidebar-section h4 {
+        padding: 0 0 5px 0;
+    }
 } 
