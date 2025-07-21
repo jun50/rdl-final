@@ -29,7 +29,6 @@
             <div class="header-site-menu">
                 <nav class="site-menu">
                     <ul>
-                        <li><a href="contact.html">問い合わせ</a></li>
                         <li><a href="map.html">アクセス</a></li>
                     </ul>
                 </nav>
@@ -114,7 +113,6 @@
     <footer class="footer">
         <nav class="site-menu">
             <ul>
-                <li><a href="contact.html">問い合わせ</a></li>
                 <li><a href="map.html">アクセス</a></li>
             </ul>
         </nav>
@@ -139,21 +137,32 @@
             },
         });
 
+        // slideOffsetBefore, slideOffsetAfter を削除し、slidesPerView: "auto" と centeredSlides: false を利用して最後のスライドが右端まで見えるように調整
         const menuSwiper = new Swiper('.menu-swiper', {
             direction: 'horizontal',
-            loop: true,
+            loop: false,
             pagination: {
                 el: '.menu-swiper-pagination',
             },
-            slidesPerView: 4,
             spaceBetween: 15,
-            slideOffsetBefore: 10,
-            slideOffsetAfter: 10,
             freeMode: true,
-            loop: false,
             navigation: {
                 nextEl: '.menu-swiper-button-next',
                 prevEl: '.menu-swiper-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 8,
+                },
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                900: {
+                    slidesPerView: 3,
+                    spaceBetween: 12,
+                },
             },
         });
     </script>

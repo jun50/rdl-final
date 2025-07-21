@@ -14,10 +14,7 @@
     <link href="../common.css" rel="stylesheet">
     <link href="../menu-detail.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +27,6 @@
             <div class="header-site-menu">
                 <nav class="site-menu">
                     <ul>
-                        <li><a href="../contact.html">問い合わせ</a></li>
                         <li><a href="../map.html">アクセス</a></li>
                     </ul>
                 </nav>
@@ -80,36 +76,6 @@
                         </div>
                     </div>
 
-                    <div class="menu-detail-nutrition">
-                        <h3>栄養情報</h3>
-                        <div class="nutrition-grid">
-                            <div class="nutrition-item">
-                                <span class="nutrition-label">エネルギー</span>
-                                <span class="nutrition-value">850kcal</span>
-                            </div>
-                            <div class="nutrition-item">
-                                <span class="nutrition-label">たんぱく質</span>
-                                <span class="nutrition-value">38g</span>
-                            </div>
-                            <div class="nutrition-item">
-                                <span class="nutrition-label">脂質</span>
-                                <span class="nutrition-value">32g</span>
-                            </div>
-                            <div class="nutrition-item">
-                                <span class="nutrition-label">炭水化物</span>
-                                <span class="nutrition-value">105g</span>
-                            </div>
-                            <div class="nutrition-item">
-                                <span class="nutrition-label">食塩相当量</span>
-                                <span class="nutrition-value">4.2g</span>
-                            </div>
-                            <div class="nutrition-item">
-                                <span class="nutrition-label">食物繊維</span>
-                                <span class="nutrition-value">6.8g</span>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="menu-detail-additional">
                         <h3>その他の情報</h3>
                         <div class="additional-info">
@@ -119,15 +85,7 @@
                             </div>
                             <div class="additional-item">
                                 <div class="additional-icon">!</div>
-                                <span class="additional-text">提供時間：11:00〜14:00</span>
-                            </div>
-                            <div class="additional-item">
-                                <div class="additional-icon">!</div>
                                 <span class="additional-text">メニューは日替わり</span>
-                            </div>
-                            <div class="additional-item">
-                                <div class="additional-icon">!</div>
-                                <span class="additional-text">おかわりご飯無料</span>
                             </div>
                         </div>
                     </div>
@@ -138,118 +96,11 @@
                 <a href="../index.html">メニュー一覧に戻る</a>
             </div>
         </div>
-
-        <div class="review-section">
-            <h3>口コミ・レビュー</h3>
-            
-            <div class="reviews-display">
-                <div class="review-item">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">学</div>
-                            <div>
-                                <div class="reviewer-name">学生D</div>
-                                <div class="review-date">2024年1月22日</div>
-                            </div>
-                        </div>
-                        <div class="review-rating">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        欲張りランチが本当にボリューム満点！メイン、サラダ、味噌汁まで全部入って500円は食堂の中でもコスパNo.1！。日替わりメニューなので飽きないし、栄養バランスも良い。お腹いっぱいになります。
-                    </div>
-                    <div class="review-tags">
-                        <span class="review-tag">ボリューム満点</span>
-                        <span class="review-tag">日替わり</span>
-                        <span class="review-tag">コスパ良い</span>
-                        <span class="review-tag">おすすめ</span>
-                    </div>
-                </div>
-                
-                <div class="review-item">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">生</div>
-                            <div>
-                                <div class="reviewer-name">農学部生</div>
-                                <div class="review-date">2024年1月19日</div>
-                            </div>
-                        </div>
-                        <div class="review-rating">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star empty">★</span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        日替わりメニューが楽しみで、よく食べに来ます。メインもサラダも美味しい。500円でこの内容は本当にお得です。
-                    </div>
-                    <div class="review-tags">
-                        <span class="review-tag">日替わり</span>
-                        <span class="review-tag">リピートしたい</span>
-                    </div>
-                </div>
-            </div>
-            <div class="review-form">
-                <form id="reviewForm">
-                    <div class="form-group">
-                        <label for="reviewerName">お名前</label>
-                        <input type="text" id="reviewerName" name="reviewerName" placeholder="匿名でもOK" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="reviewRating">評価</label>
-                        <div class="rating-group">
-                            <div class="rating-stars">
-                                <input type="radio" id="star5" name="rating" value="5">
-                                <label for="star5">★</label>
-                                <input type="radio" id="star4" name="rating" value="4">
-                                <label for="star4">★</label>
-                                <input type="radio" id="star3" name="rating" value="3">
-                                <label for="star3">★</label>
-                                <input type="radio" id="star2" name="rating" value="2">
-                                <label for="star2">★</label>
-                                <input type="radio" id="star1" name="rating" value="1">
-                                <label for="star1">★</label>
-                            </div>
-                            <span>（5段階評価）</span>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="reviewContent">レビュー内容</label>
-                        <textarea id="reviewContent" name="reviewContent" placeholder="このメニューの感想を教えてください..." required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="reviewTags">タグ（複数選択可）</label>
-                        <select id="reviewTags" name="reviewTags" multiple>
-                            <option value="ボリューム満点">ボリューム満点</option>
-                            <option value="日替わり">日替わり</option>
-                            <option value="栄養バランス">栄養バランス</option>
-                            <option value="コスパ良い">コスパ良い</option>
-                            <option value="おすすめ">おすすめ</option>
-                            <option value="リピートしたい">リピートしたい</option>
-                        </select>
-                    </div>
-                    
-                    <button type="submit" class="submit-button">レビューを投稿する</button>
-                </form>
-            </div>
-        </div>
     </main>
 
     <footer class="footer">
         <nav class="site-menu">
             <ul>
-                <li><a href="../contact.html">問い合わせ</a></li>
                 <li><a href="../map.html">アクセス</a></li>
             </ul>
         </nav>
@@ -266,17 +117,6 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-        });
-
-        // Select2の初期化
-        $(document).ready(function() {
-            $('#reviewTags').select2({
-                placeholder: 'タグを選択してください',
-                allowClear: true,
-                maximumResultsForSearch: 10,
-                width: '100%',
-                dropdownParent: $('body')
-            });
         });
     </script>
 </body>
