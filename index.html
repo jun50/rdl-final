@@ -137,16 +137,14 @@
             },
         });
 
+        // slideOffsetBefore, slideOffsetAfter を削除し、slidesPerView: "auto" と centeredSlides: false を利用して最後のスライドが右端まで見えるように調整
         const menuSwiper = new Swiper('.menu-swiper', {
             direction: 'horizontal',
             loop: false,
             pagination: {
                 el: '.menu-swiper-pagination',
             },
-            slidesPerView: 4,
             spaceBetween: 15,
-            slideOffsetBefore: 10,
-            slideOffsetAfter: 10,
             freeMode: true,
             navigation: {
                 nextEl: '.menu-swiper-button-next',
